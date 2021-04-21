@@ -1,7 +1,7 @@
 const request = require('request')
-
+const config = require('../src/config')
 const foreCast = (x, y, cb) => {
-    const url = `http://api.weatherstack.com/forecast?access_key=01ffbef3f40e235f6d126936bf15c05f&query=${x},${y}`
+    const url = `http://api.weatherstack.com/forecast?access_key=${config.fore_cast}&query=${x},${y}`
     request({ url, json: true }, (error, { body }) => {
         if (error) {
             cb('Unable to connect to location services', undefined)

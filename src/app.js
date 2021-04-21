@@ -4,7 +4,7 @@ const app = express()
 const hbs = require('hbs')
 const geoCode = require('../utils/geoCode')
 const foreCast = require('../utils/foreCast')
-
+const port = process.env.PORT || 9000
 //Setup handlebars and views location
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, '../templates/views'))
@@ -79,4 +79,4 @@ app.get('*', function (req, res, next) {
   })
 })
 
-app.listen(9000, () => { console.log(`Server listening on port 9000`) })
+app.listen(port, () => { console.log(`Server listening on port ${port}`) })
