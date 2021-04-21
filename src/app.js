@@ -54,7 +54,6 @@ app.get('/weather', function (req, res, next) {
   )
 })
 
-
 app.get('/products', function (req, res, next) {
   console.log(req.query)
   res.send({

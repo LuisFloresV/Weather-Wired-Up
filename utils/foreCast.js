@@ -14,6 +14,7 @@ const foreCast = (x, y, cb) => {
                 temp: body.current.temperature,
                 feels: body.current.feelslike,
                 description: body.current.weather_descriptions[0],
+                icon: body.current.weather_icons[0],
                 name: body.location.name,
                 country: body.location.country
             })
